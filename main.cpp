@@ -135,11 +135,9 @@ void MouseAndandoNaoPressionado (int x, int y){
     x_cartes = x_cartes-(SIZE_VIEW/2);
     y_cartes = -(y_cartes-(SIZE_VIEW/2));
 
-    //printf("Mouse ANDANDO solto na janela. Posição: (%f, %f)\n", x_cartes-(SIZE_VIEW/2), -(y_cartes-(SIZE_VIEW/2)));
-
     //detectando hover para cada casa
-    for(int i = 0; i < 8; i++){
-        for(int j = 0; j < 8; j++){ tabuleiroCasas[i][j].detect_hover(x_cartes, y_cartes);
+    for(int i = 0; i < SIZE_VIEW; i++){
+        for(int j = 0; j < SIZE_VIEW; j++){ tabuleiroCasas[i][j].detect_hover(x_cartes, y_cartes);
         }
     }
 

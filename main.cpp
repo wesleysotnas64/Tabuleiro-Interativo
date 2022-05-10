@@ -1,4 +1,4 @@
-//g g++ main.cpp casa.cpp cor.cpp ponto.cpp -lGL -lglut
+//g++ main.cpp casa.cpp cor.cpp ponto.cpp -lGL -lglut
 #include <iostream>
 #include <GL/glut.h>
 
@@ -19,7 +19,7 @@ void tabuleiroDraw();
 
 void MouseAndandoNaoPressionado (int x, int y);
 
-Casa  tabuleiroCasas[8][8];
+Casa  tabuleiroCasas[SIZE_VIEW][SIZE_VIEW];
 Casa c;
 
 float x_cartes;
@@ -28,7 +28,7 @@ float y_cartes;
 int main(int argc, char** argv){
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
-    glutInitWindowSize(400, 400);
+    glutInitWindowSize(WIDTH, HEIGHT);
     glutInitWindowPosition(100, 100);
     glutCreateWindow("Tabuleiro 2D!");
 

@@ -92,9 +92,9 @@ void inicia_tabuleiro(){
     float x;
     Ponto p;
     
-    for(int i = 0; i < 8; i++){
+    for(int i = 0; i < SIZE_VIEW; i++){
         x = -4;
-        for(int j = 0; j < 8; j++){
+        for(int j = 0; j < SIZE_VIEW; j++){
             p.set_coord(x,y,0);
             tabuleiroCasas[i][j].set_pivot(p);
             x++;
@@ -127,7 +127,7 @@ void MouseAndandoNaoPressionado (int x, int y){
     float y_convert = (float) y;
 
     float x_proporcao = x_convert/WIDTH;
-    float y_proporcao = y_convert/WIDTH;
+    float y_proporcao = y_convert/HEIGHT;
 
     x_cartes = x_proporcao*SIZE_VIEW;
     y_cartes = y_proporcao*SIZE_VIEW;
